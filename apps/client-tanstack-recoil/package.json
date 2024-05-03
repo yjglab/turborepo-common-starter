@@ -3,21 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 50005",
+    "dev": "next dev --port 50001",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.32.1",
+    "@tanstack/react-query-devtools": "^5.32.1",
     "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.4",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@tanstack/eslint-plugin-query": "^5.32.1",
     "@types/eslint": "^8.56.1",
     "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
