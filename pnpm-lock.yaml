@@ -137,6 +137,70 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  apps/client-tanstack-zustand:
+    dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@tanstack/react-query':
+        specifier: ^5.32.1
+        version: 5.32.1(react@18.2.0)
+      '@tanstack/react-query-devtools':
+        specifier: ^5.32.1
+        version: 5.32.1(@tanstack/react-query@5.32.1)(react@18.2.0)
+      next:
+        specifier: ^14.0.4
+        version: 14.2.3(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      zustand:
+        specifier: ^4.5.2
+        version: 4.5.2(@types/react@18.2.61)(react@18.2.0)
+    devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^14.0.4
+        version: 14.2.3
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@tanstack/eslint-plugin-query':
+        specifier: ^5.32.1
+        version: 5.32.1(eslint@8.57.0)(typescript@5.3.3)
+      '@types/eslint':
+        specifier: ^8.56.1
+        version: 8.56.5
+      '@types/node':
+        specifier: ^20.10.6
+        version: 20.11.24
+      '@types/react':
+        specifier: ^18.2.46
+        version: 18.2.61
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.2.19
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.19(postcss@8.4.38)
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      postcss:
+        specifier: ^8.4.33
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.3
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
@@ -3678,6 +3742,7 @@ packages:
 
   /resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
+    hasBin: true
     dependencies:
       is-core-module: 2.13.1
       path-parse: 1.0.7
@@ -3750,6 +3815,7 @@ packages:
   /semver@7.5.4:
     resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
     engines: {node: '>=10'}
+    hasBin: true
     dependencies:
       lru-cache: 6.0.0
     dev: true
@@ -4285,6 +4351,14 @@ packages:
       punycode: 2.3.0
     dev: true
 
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -4387,3 +4461,23 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zustand@4.5.2(@types/react@18.2.61)(react@18.2.0):
+    resolution: {integrity: sha512-2cN1tPkDVkwCy5ickKrI7vijSjPksFRfqS6237NzT0vqSsztTNnQdHw9mmN7uBdk3gceVXU0a+21jFzFzAc9+g==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0.6'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': 18.2.61
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
