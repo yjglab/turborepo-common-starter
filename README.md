@@ -42,6 +42,11 @@
 - Zustand@4
 - Tanstack-Query@5
 
+##### /server-nest-prisma: 기본 NestJS 프로젝트입니다.
+
+- NestJS@10
+- Prisma@5 + MongoDB
+
 > Launch Guide
 
 ##### 모든 프로젝트 의존성 패키지 설치

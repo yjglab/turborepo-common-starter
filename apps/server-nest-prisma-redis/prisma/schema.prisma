@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DB_URL")
+}
+
+model User {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  provider    Provider
+  email       String      @unique
+  displayName String      @unique
+  password    String
+  position    String
+  about       String      @default("")
+  plan        ServicePlan
+  status      UserStatus  @default(pending)
+  avatar      String?     @default("")
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @default(now())
+}
+
+type Provider {
+  id   String
+  name ProviderName
+}
+
+type ServicePlan {
+  name   PlanName
+  expire DateTime?
+}
+
+enum PlanName {
+  free
+  pro
+  expert
+  manager
+  admin
+}
+
+enum ProviderName {
+  local
+  google
+  facebook
+  kakao
+}
+
+enum UserStatus {
+  pending
+  verified
+  banned
+}
