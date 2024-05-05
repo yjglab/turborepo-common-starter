@@ -1,5 +1,8 @@
 {
-  "name": "nebaram-turborepo-common",
+  "name": "turborepo-common-starter",
+  "author": {
+    "name": "Jaekyeong Yuk (yjglab)"
+  },
   "private": true,
   "scripts": {
     "build": "turbo build",

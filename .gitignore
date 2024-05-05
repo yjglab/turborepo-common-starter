@@ -39,3 +39,9 @@ yarn-error.log*
 
 # Personal
 private/
+
+# Env
+.env.local
+.env.development
+.env.production
+

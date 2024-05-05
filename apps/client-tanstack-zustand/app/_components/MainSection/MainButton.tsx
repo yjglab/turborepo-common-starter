@@ -5,7 +5,7 @@ import ActionButton from "@ui/components/parts/ActionButton";
 import { FC, useEffect } from "react";
 
 interface Props {}
-const MainButton: FC<Props> = ({}) => {
+const MainButton: FC<Props> = () => {
   const user = useUserStore();
 
   useEffect(() => {
