@@ -21,7 +21,7 @@ importers:
         specifier: latest
         version: 1.13.3
 
-  apps/client:
+  apps/client-next:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
@@ -73,7 +73,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  apps/client-tanstack-recoil:
+  apps/client-next-tanstack-recoil:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
@@ -137,7 +137,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  apps/client-tanstack-zustand:
+  apps/client-next-tanstack-zustand:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
@@ -307,7 +307,7 @@ importers:
         specifier: ^10.2.7
         version: 10.3.8(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
       '@nestjs/config':
-        specifier: ^3.1.1
+        specifier: ^3.2.2
         version: 3.2.2(@nestjs/common@10.3.8)(rxjs@7.8.1)
       '@nestjs/core':
         specifier: ^10.2.7

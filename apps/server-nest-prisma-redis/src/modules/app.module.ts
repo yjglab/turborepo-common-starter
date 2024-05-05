@@ -6,17 +6,18 @@ import { RedisModule, RedisModuleOptions } from '@liaoliaots/nestjs-redis';
 import {
   WsEmitterClientOptions,
   WsEmitterModule,
-} from './v1/redis/ws-emitter.module';
+} from './v1/redis.io/ws-emitter.module';
 import { PrismaModule } from './prisma/prisma.module';
-import { AuthModule } from './v1/auth/auth.module';
-import { UserModule } from './v1/user/user.module';
 import { PrismaService } from './prisma/prisma.service';
 import { AppController } from './app.controller';
+import { V1Module } from './v1/v1.module';
 
+console.log(`.env.${process.env.NODE_ENV}`);
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
     ThrottlerModule.forRoot([
       {
@@ -53,8 +54,7 @@ import { AppController } from './app.controller';
       },
     }),
     PrismaModule,
-    AuthModule,
-    UserModule,
+    V1Module,
   ],
   controllers: [AppController],
   providers: [

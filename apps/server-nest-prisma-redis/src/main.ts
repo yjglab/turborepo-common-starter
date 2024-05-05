@@ -18,7 +18,7 @@ import { ConfigService } from '@nestjs/config';
 import helmet from 'helmet';
 
 import { AppModule } from './modules/app.module';
-import { RedisIoAdapter } from './modules/v1/redis/redis.adapter';
+import { RedisIoAdapter } from './modules/v1/redis.io/redis.io.adapter';
 import { setupSwagger } from './utils/swagger/setupSwagger';
 
 export async function bootstrap(): Promise<NestExpressApplication> {

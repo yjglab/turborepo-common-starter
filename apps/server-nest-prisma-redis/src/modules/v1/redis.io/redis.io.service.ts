@@ -5,8 +5,8 @@ import { WsException } from '@nestjs/websockets';
 import { AuthService } from '@/modules/v1/auth/auth.service';
 
 @Injectable()
-export class RedisService {
-  private readonly logger: Logger = new Logger('RedisService');
+export class RedisIoService {
+  private readonly logger: Logger = new Logger('RedisIoService');
   constructor(private readonly authService: AuthService) {}
 
   async loadUserFromSocket(socket: Socket) {
