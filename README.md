@@ -47,6 +47,12 @@
 - NestJS@10
 - Prisma@5 + MongoDB
 
+##### /server-nest-prisma-redis: 기본 NestJS 프로젝트에 세션 관리용 Redis/Socket 모듈이 추가되어있습니다.
+
+- NestJS@10
+- Prisma@5 + MongoDB
+- Redis + Socket.io
+
 > Launch Guide
 
 ##### 모든 프로젝트 의존성 패키지 설치
