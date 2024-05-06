@@ -6,6 +6,7 @@ import {
   ClassSerializerInterceptor,
   HttpException,
   HttpStatus,
+  Logger,
   ValidationPipe,
   VersioningType,
 } from '@nestjs/common';
@@ -22,6 +23,7 @@ import { RedisIoAdapter } from './modules/v1/redis.io/redis.io.adapter';
 import { setupSwagger } from './utils/swagger/setupSwagger';
 
 export async function bootstrap(): Promise<NestExpressApplication> {
+  const logger = new Logger('SERVER-NEST-PRISMA-REDIS');
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,
     new ExpressAdapter(),
@@ -88,6 +90,7 @@ export async function bootstrap(): Promise<NestExpressApplication> {
   useContainer(app.select(AppModule), { fallbackOnErrors: true });
   await app.listen(Number(configService.get('APP_PORT')));
 
+  logger.log(`✅ SERVER NOW RUNNING ON ${configService.get('APP_PORT')}`);
   return app;
 }
 
