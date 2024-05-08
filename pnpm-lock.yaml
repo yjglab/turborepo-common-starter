@@ -201,6 +201,61 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  apps/client-next-zustand:
+    dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      next:
+        specifier: ^14.0.4
+        version: 14.2.3(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      zustand:
+        specifier: ^4.5.2
+        version: 4.5.2(@types/react@18.2.61)(react@18.2.0)
+    devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^14.0.4
+        version: 14.2.3
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@types/eslint':
+        specifier: ^8.56.1
+        version: 8.56.5
+      '@types/node':
+        specifier: ^20.10.6
+        version: 20.11.24
+      '@types/react':
+        specifier: ^18.2.46
+        version: 18.2.61
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.2.19
+      autoprefixer:
+        specifier: ^10.4.17
+        version: 10.4.19(postcss@8.4.38)
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      postcss:
+        specifier: ^8.4.33
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.3
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   apps/server-nest-mailer:
     dependencies:
       '@liaoliaots/nestjs-redis':
@@ -6230,7 +6285,6 @@ packages:
       minimatch: 9.0.3
       minipass: 7.0.4
       path-scurry: 1.10.2
-    dev: false
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -6249,7 +6303,7 @@ packages:
       fs.realpath: 1.0.0
       minimatch: 8.0.4
       minipass: 4.2.8
-      path-scurry: 1.10.1
+      path-scurry: 1.10.2
     dev: true
 
   /globals@11.12.0:
@@ -9083,7 +9137,6 @@ packages:
     dependencies:
       lru-cache: 10.2.0
       minipass: 7.0.4
-    dev: false
 
   /path-to-regexp@0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
@@ -10278,7 +10331,7 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       commander: 4.1.1
-      glob: 10.3.10
+      glob: 10.3.12
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.6

@@ -26,7 +26,14 @@
 - React@18
 - TailwindCSS@3
 
-##### /client-next-tanstack-recoil: NextJS 프로젝트에 상태관리 라이브러리가 추가되어있습니다.
+##### /client-next-zustand: NextJS 프로젝트에 클라이언트 상태관리 라이브러리가 추가되어있습니다.
+
+- NextJS@14
+- React@18
+- TailwindCSS@3
+- Zustand@4
+
+##### /client-next-tanstack-recoil: NextJS 프로젝트에 클라이언트/서버 상태관리 라이브러리가 추가되어있습니다.
 
 - NextJS@14
 - React@18
@@ -34,7 +41,7 @@
 - Recoil@0
 - Tanstack-Query@5
 
-##### /client-next-tanstack-zustand: NextJS 프로젝트에 상태관리 라이브러리가 추가되어있습니다.
+##### /client-next-tanstack-zustand: NextJS 프로젝트에 클라이언트/서버 상태관리 라이브러리가 추가되어있습니다.
 
 - NextJS@14
 - React@18
@@ -85,7 +92,7 @@ pnpm ui:add
 src/components/ 에 새 공유 디렉터리 생성 후 컴포넌트 export.
 ```
 
-##### 새 클라이언트 프로젝트 추가
+##### 새 프로젝트 모듈 추가
 
 ```
 turbo gen workspace --copy
